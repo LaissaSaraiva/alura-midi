@@ -1,42 +1,51 @@
 :root {
   --cinza: #aaa;
+  --azul: #171127;
+  --azul-claro: #181949;
+  --rosa: #bd11ce;
   --vermelha: #e93d50;
   --vermelha-escura: #af303f;
   --branca: #fff;
   --luz: rgb(229, 255, 0);
 }
 
+html {
+  background-image: url(../images/bg-sound.webp);
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
 body {
   align-items: center;
-  background: linear-gradient(45deg, #a7cfdf 0%,#23538a 100%);
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
 }
 
 h1 {
   color: var(--branca);
+  text-shadow: #aaa 1px 1px 1px;
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .teclado {
-  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
-  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 30px;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  padding: 10px;
+  padding: 20px;
 }
 
 .tecla {
   background-color: var(--branca);
   border-radius: 30px;
   box-shadow: 3px 3px 0 var(--cinza);
-  color: var(--vermelha);
+  color: var(--azul);
   cursor: pointer;
   height: 120px;
   font-size: 1.75em;
@@ -48,9 +57,9 @@ h1 {
 
 .tecla.ativa,
 .tecla:active {
-  background-color: var(--vermelha);
-  border: 4px solid  var(--vermelha);
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
+  background-color: var(--azul);
+  border: 4px solid var(--azul);
+  box-shadow: 3px 3px 0 var(--azul-claro) inset;
   color: var(--branca);
   outline: none;
 }
@@ -58,10 +67,10 @@ h1 {
 .tecla.focus,
 .tecla:focus {
   outline: none;
-  box-shadow: 1px 1px 10px var(--luz);
+  box-shadow: 1px 1px 10px var(--rosa);
 }
 
 .tecla.active:focus,
 .tecla:active:focus {
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+  box-shadow: 3px 3px 0 var(--azul-claro) inset, 1px 1px 10px var(--rosa);
 }
