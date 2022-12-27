@@ -74,3 +74,9 @@ h1 {
 .tecla:active:focus {
   box-shadow: 3px 3px 0 var(--azul-claro) inset, 1px 1px 10px var(--rosa);
 }
+
+@media (max-width: 430px) {
+  .teclado {
+    transform: scale(0.7);
+  }
+}
