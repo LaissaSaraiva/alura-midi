@@ -16,6 +16,7 @@ html {
   background-position: center;
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -83,7 +84,8 @@ h1 {
 
 footer {
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  padding-top: 0;
   width: 100%;
   position: absolute;
   bottom: 0;
